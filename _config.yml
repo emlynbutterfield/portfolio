@@ -1,8 +1,8 @@
 # Site settings
 name: "Student Portfolio"
 description: "Research • Studies • Outputs"
-url: "" # e.g. https://username.github.io
-baseurl: "" # e.g. /student-portfolio if not user/org site
+url: "https://emlynbutterfield.github.io/portfolio" # e.g. https://username.github.io
+baseurl: "https://emlynbutterfield.github.io/ # e.g. /student-portfolio if not user/org site
 
 
 # Build settings
