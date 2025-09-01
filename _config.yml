@@ -1,0 +1,85 @@
+# Site settings
+name: "Student Portfolio"
+description: "Research • Studies • Outputs"
+url: "" # e.g. https://username.github.io
+baseurl: "" # e.g. /student-portfolio if not user/org site
+
+
+# Build settings
+theme: null
+markdown: kramdown
+permalink: pretty
+
+
+# Collections
+collections:
+research:
+output: true
+permalink: /research/:path/
+modules:
+output: true
+permalink: /modules/:path/
+outputs:
+output: true
+permalink: /outputs/:path/
+
+
+# Defaults for collections
+defaults:
+- scope:
+path: ""
+type: "research"
+values:
+layout: item
+category: research
+- scope:
+path: ""
+type: "modules"
+values:
+layout: item
+category: modules
+- scope:
+path: ""
+type: "outputs"
+values:
+layout: item
+category: outputs
+- scope:
+path: ""
+values:
+layout: page
+
+
+# Navigation (edit to suit)
+nav:
+- title: Home
+url: /
+- title: Research
+url: /research/
+- title: Modules
+url: /modules/
+- title: Outputs
+url: /outputs/
+- title: CV
+url: /cv/
+- title: About
+url: /about/
+
+
+# Plugins (all supported on GitHub Pages)
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+
+
+# SEO
+author:
+name: "Your Name"
+email: "you@example.com"
+
+
+# Social previews
+social:
+github: username
+linkedin: your-linkedin
+scholar: your-scholar

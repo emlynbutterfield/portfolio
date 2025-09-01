@@ -1,0 +1,11 @@
+name: Jane Student
+photo: /assets/img/profile.jpg   # put an image in assets/img
+email: jane.student@example.com
+location: Kristiansand, Norway
+pronouns: she/her
+website: https://janestudent.me
+orcid: 0000-0000-0000-0000
+scholar: https://scholar.google.com/citations?user=XXXXX
+github: janestudent
+linkedin: jane-student
+tagline: "BSc Digital Forensics & Incident Response (Year 2)"

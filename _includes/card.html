@@ -1,0 +1,5 @@
+<article class="card">
+<h3 class="card-title"><a href="{{ include.url }}">{{ include.title }}</a></h3>
+{% if include.meta %}<p class="card-meta">{{ include.meta }}</p>{% endif %}
+{% if include.excerpt %}<p>{{ include.excerpt }}</p>{% endif %}
+</article>

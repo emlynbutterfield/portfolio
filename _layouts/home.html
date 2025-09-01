@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="hero">
+<img class="avatar" src="{{ site.profile.photo | default: '/assets/img/placeholder.jpg' | relative_url }}" alt="Profile photo">
+<div>
+<h1>{{ site.profile.name | default: site.author.name }}</h1>
+<p>{{ site.profile.tagline | default: site.description }}</p>
+<p class="muted">{{ site.profile.location }}</p>
+</div>
+</section>
+
+
+<section>
+<h2>Highlights</h2>
+<div class="grid">
+{% assign featured = site.outputs | where_exp: 'i','i.featured == true' | slice: 3 %}
+{% for item in featured %}
+{% include card.html title=item.title url=item.url excerpt=item.excerpt %}
+{% endfor %}
+</div>
+</section>
+
+
+<section>
+<h2>Latest research</h2>
+<div class="grid">
+{% for item in site.research limit:3 %}
+{% include card.html title=item.title url=item.url meta=item.date range %}
+{% endfor %}
+</div>
+</section>
