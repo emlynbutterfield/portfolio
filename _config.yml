@@ -1,85 +1,78 @@
 # Site settings
 name: "Student Portfolio"
 description: "Research • Studies • Outputs"
-url: "https://emlynbutterfield.github.io/portfolio" # e.g. https://username.github.io
-baseurl: "https://emlynbutterfield.github.io/ # e.g. /student-portfolio if not user/org site
-
+url: "https://emlynbutterfield.github.io"   # Root of your GitHub Pages user/org site (no trailing slash)
+baseurl: "/portfolio"                        # Repo name for project pages, or "" for user/org sites
 
 # Build settings
 theme: null
 markdown: kramdown
 permalink: pretty
 
-
 # Collections
 collections:
-research:
-output: true
-permalink: /research/:path/
-modules:
-output: true
-permalink: /modules/:path/
-outputs:
-output: true
-permalink: /outputs/:path/
-
+  research:
+    output: true
+    permalink: /research/:path/
+  modules:
+    output: true
+    permalink: /modules/:path/
+  outputs:
+    output: true
+    permalink: /outputs/:path/
 
 # Defaults for collections
 defaults:
-- scope:
-path: ""
-type: "research"
-values:
-layout: item
-category: research
-- scope:
-path: ""
-type: "modules"
-values:
-layout: item
-category: modules
-- scope:
-path: ""
-type: "outputs"
-values:
-layout: item
-category: outputs
-- scope:
-path: ""
-values:
-layout: page
-
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: item
+      category: research
+  - scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: item
+      category: modules
+  - scope:
+      path: ""
+      type: "outputs"
+    values:
+      layout: item
+      category: outputs
+  - scope:
+      path: ""
+    values:
+      layout: page
 
 # Navigation (edit to suit)
 nav:
-- title: Home
-url: /
-- title: Research
-url: /research/
-- title: Modules
-url: /modules/
-- title: Outputs
-url: /outputs/
-- title: CV
-url: /cv/
-- title: About
-url: /about/
-
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: Modules
+    url: /modules/
+  - title: Outputs
+    url: /outputs/
+  - title: CV
+    url: /cv/
+  - title: About
+    url: /about/
 
 # Plugins (all supported on GitHub Pages)
 plugins:
-- jekyll-feed
-- jekyll-seo-tag
-
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # SEO
 author:
-name: "Your Name"
-email: "you@example.com"
-
+  name: "Your Name"
+  email: "you@example.com"
 
 # Social previews
 social:
-github: username
-linkedin: your-linkedin
-scholar: your-scholar
+  github: username
+  linkedin: your-linkedin
+  scholar: your-scholar
